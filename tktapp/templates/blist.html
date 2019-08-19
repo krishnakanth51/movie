@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<h2>Ticket</h2>
+{% for pl in form %}
+<div class="modal-body">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"><b>Date:</b> {{pl.date}}</li>
+        <li class="list-group-item"><b>Show Time:</b> {{pl.showtime}}</li>
+        <li class="list-group-item"><b>Price:</b> {{pl.ticketprice}}</li>
+        <li class="list-group-item"><b>Ownername:</b> {{pl.name}}</li>
+        <li class="list-group-item"><b>Seat no:</b> {{pl.select_seat}}</li>
+        <li class="list-group-item"><b>Theatre:</b> {{pl.theatre}}</li>
+    </ul>
+</div>
+{%endfor%}
+
+</html>

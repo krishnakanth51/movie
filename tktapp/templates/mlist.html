@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<!-- <body>
+    <h1>Movies</h1>
+    <table border=2>
+        <tr>
+            <th>MovieName</th>
+            <th>Hero</th>
+            <th>Heroine</th>
+            <th>Director</th>
+            <th>Genre</th>
+            <th>Language</th>
+            <th>Releasedate</th>
+            <th>Runtime</th>
+            <th>Booking</th>
+        </tr>
+        {% for movie in form %}
+        <tr>
+            <td>{{movie.name}}</td>
+            <td>{{movie.hero}}</td>
+            <td>{{movie.heroine}}</td>
+            <td>{{movie.director}}</td>
+            <td>{{movie.genre}}</td>
+            <td>{{movie.language}}</td>
+            <td>{{movie.release_date}}</td>
+            <td>{{movie.runtime}}</td>
+            <td><a href="/tl">book</a> &nbsp;
+
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html> -->
+
+<h2>Movies</h2>
+{% for pl in form %}
+<div class="modal-body">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"><b>Movie:</b> {{pl.name}}</li>
+        <li class="list-group-item"><b>Hero:</b> {{pl.hero}}</li>
+        <li class="list-group-item"><b>Heroine:</b> {{pl.heroine}}</li>
+        <li class="list-group-item"><b>Director:</b> {{pl.director}}</li>
+        <li class="list-group-item"><b>Language:</b> {{pl.language}}</li>
+        <li class="list-group-item"><b>Release:</b> {{pl.release_date}}</li>
+        <li class="list-group-item"><b>Runtime:</b> {{pl.runtime}}</li>
+        <li class="list-group-item"><b>Genre:</b> {{pl.genre}}</li>
+        <font size="5"><a href="/tl">book</a></font>
+
+    </ul>
+</div>
+{%endfor%}
+
+</html>

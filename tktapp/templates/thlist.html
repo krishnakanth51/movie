@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ticketnow</title>
+</head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<body>
+    <h1>Theatre</h1>
+    <table border="1" style="width:50%;">
+        <tr>
+            <th>Theatre</th>
+            <th>address</th>
+            <th>movie</th>
+            <th>action</th>
+        </tr>
+        {% for movie in form %}
+        <tr>
+            <td>{{movie.theatrename}}</td>
+            <td>{{movie.address}}</td>
+            <td>{{movie.movie}}</td>
+            <td>
+                <font size="4"></font><a href="/bk">tickets</a></font>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>
